@@ -5,31 +5,23 @@ services:
     image: suryashankar598/phonepaymovie:latest
     ports:
       - 8000:80
-    volumes:
-      - movievol
     deploy:
       replicas: 5
   train:
     image: suryashankar598/phonepaytrainticket:latest
     ports:
       - 8001:80
-    volumes:
-      - trainvol
     deploy:
       replicas: 5
   loan:
     image: suryashankar598/phonepayloanpayment:latest
     ports:
       - 8002:80
-    volumes:
-      - loanvol
     deploy:
       replicas: 5
   flight:
     image: suryashankar598/phonepayflighttickets:latest
     ports:
       - 8003:80
-    volumes:
-      - flightvol
     deploy:
       replicas: 5
