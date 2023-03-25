@@ -1,29 +1,35 @@
+---
 version: "3"
 services:
   movie:
-    image: movie:v1
-    ports: 
-      - "8000:80"
+    image: suryashankar598/phonepaymovie:latest
+    ports:
+      - 8000:80
     volumes:
-      - "movievol"
-
+      - movievol
+    deploy:
+      replicas: 5
   train:
-    image: train:v1
+    image: suryashankar598/phonepaytrainticket:latest
     ports:
-      - "8001:80"
+      - 8001:80
     volumes:
-      - "trainvol"
-
+      - trainvol
+    deploy:
+      replicas: 5
   loan:
-    image: loan:v1
+    image: suryashankar598/phonepayloanpayment:latest
     ports:
-      - "8002:80"
+      - 8002:80
     volumes:
-      - "loanvol"
-
-  filght:
-    image: filght:v1
+      - loanvol
+    deploy:
+      replicas: 5
+  flight:
+    image: suryashankar598/phonepayflighttickets:latest
     ports:
-      - "8003:80"
+      - 8003:80
     volumes:
-      - "filghtvol"     
+      - flightvol
+    deploy:
+      replicas: 5
