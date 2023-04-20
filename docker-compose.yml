@@ -6,19 +6,19 @@ services:
     ports:
       - 8000:80
     deploy:
-      replicas: 5
+      replicas: 2
   train:
     image: suryashankar598/phonepaytrainticket:latest
     ports:
       - 8001:80
     deploy:
-      replicas: 5
+      replicas: 2
   loan:
     image: suryashankar598/phonepayloanpayment:latest
     ports:
       - 8002:80
     deploy:
-      replicas: 5
+      replicas: 2
   flight:
     image: suryashankar598/phonepayflighttickets:latest
     ports:
